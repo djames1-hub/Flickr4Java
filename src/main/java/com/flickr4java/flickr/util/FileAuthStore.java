@@ -127,6 +127,7 @@ public class FileAuthStore implements AuthStore {
      * 
      * @see com.flickr4java.flickr.util.AuthStore#clearAll()
      */
+    // TODO: null check for dereference for auths local variable
     public void clearAll() {
         this.auths.clear();
         this.authsByUser.clear();
