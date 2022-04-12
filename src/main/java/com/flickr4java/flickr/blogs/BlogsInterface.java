@@ -83,8 +83,7 @@ public class BlogsInterface {
      *            The blog password
      * @throws FlickrException if there was a problem connecting to Flickr
      */
-    // TODO: Make all parameters final since not assigned to anything
-    public void postPhoto(Photo photo, String blogId, String blogPassword) throws FlickrException {
+    public void postPhoto(final Photo photo, final String blogId, final String blogPassword) throws FlickrException {
         Map<String, Object> parameters = new HashMap<String, Object>();
         parameters.put("method", METHOD_POST_PHOTO);
 
