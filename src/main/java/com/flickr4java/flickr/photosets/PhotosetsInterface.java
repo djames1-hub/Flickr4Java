@@ -483,6 +483,7 @@ public class PhotosetsInterface {
      * @return PhotoList The Collection of Photo objects
      * @throws FlickrException if there was a problem connecting to Flickr
      */
+    // TODO: Change parameter privacy_filter to camel case to meet parameter naming conventions
     public PhotoList<Photo> getPhotos(String photosetId, Set<String> extras, int privacy_filter, int perPage, int page) throws FlickrException {
         PhotoList<Photo> photos = new PhotoList<Photo>();
         Map<String, Object> parameters = new HashMap<String, Object>();
