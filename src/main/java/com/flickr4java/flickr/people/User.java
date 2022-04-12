@@ -425,9 +425,8 @@ public class User implements Serializable, BuddyIconable {
     }
 
     @Override
-    // TODO: Remove useless parenthesis for better readability
     public boolean equals(Object obj) {
-        if ((obj == null) || (obj.getClass() != this.getClass())) {
+        if (obj == null || obj.getClass() != this.getClass()) {
             return false;
         }
         if (obj == this) {
