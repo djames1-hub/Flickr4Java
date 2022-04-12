@@ -62,6 +62,7 @@ public class FileTestProperties implements TestProperties {
         populate(properties);
     }
 
+    // TODO: Remove instantiation of FileInputStream
     private Properties load(File propertiesFile) {
         Properties properties = new Properties();
 
