@@ -50,6 +50,7 @@ public class BlogsInterface {
      * @return List of Services
      * @throws FlickrException if there was a problem connecting to Flickr
      */
+    // TODO: Replace HashMap with ConcurrentHashMap
     public Collection<Service> getServices() throws FlickrException {
         List<Service> list = new ArrayList<Service>();
         Map<String, Object> parameters = new HashMap<String, Object>();
