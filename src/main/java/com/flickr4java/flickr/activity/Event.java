@@ -35,9 +35,10 @@ public class Event {
 
     //TODO: Add braces to if statement
     public void setDateadded(String dateAdded) {
-        if (dateAdded == null || "".equals(dateAdded))
-            return;
-        setDateadded(new Date(Long.parseLong(dateAdded) * (long) 1000));
+        if (dateAdded == null || "".equals(dateAdded)) {
+        } else {
+        	setDateadded(new Date(Long.parseLong(dateAdded) * (long) 1000));
+        }
     }
 
     public String getId() {
