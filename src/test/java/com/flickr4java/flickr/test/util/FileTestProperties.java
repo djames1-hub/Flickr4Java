@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -62,11 +63,11 @@ public class FileTestProperties implements TestProperties {
         populate(properties);
     }
 
-    // TODO: Remove instantiation of FileInputStream
     private Properties load(File propertiesFile) {
         Properties properties = new Properties();
 
-        try (InputStream in = new FileInputStream(propertiesFile)) {
+        try {
+        	InputStream in = Files.newInputStream(propertiesFile.toPath());
             properties.load(in);
         } catch (IOException e) {
             throw new FlickrRuntimeException("Problem loading properties", e);
