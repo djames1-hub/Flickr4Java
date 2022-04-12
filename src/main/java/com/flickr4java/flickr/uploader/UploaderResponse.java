@@ -96,6 +96,7 @@ public class UploaderResponse implements Response {
     /**
      * @see com.flickr4java.flickr.Response#getPayloadCollection()
      */
+    // TODO: Return empty collection rather than null
     public Collection<Element> getPayloadCollection() {
         return null;
     }
