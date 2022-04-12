@@ -15,6 +15,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Interface for working with Flickr blog configurations.
@@ -50,10 +51,9 @@ public class BlogsInterface {
      * @return List of Services
      * @throws FlickrException if there was a problem connecting to Flickr
      */
-    // TODO: Replace HashMap with ConcurrentHashMap
     public Collection<Service> getServices() throws FlickrException {
         List<Service> list = new ArrayList<Service>();
-        Map<String, Object> parameters = new HashMap<String, Object>();
+        Map<String, Object> parameters = new ConcurrentHashMap<String, Object>();
         parameters.put("method", METHOD_GET_SERVICES);
 
         Response response = transportAPI.get(transportAPI.getPath(), parameters, apiKey, sharedSecret);
