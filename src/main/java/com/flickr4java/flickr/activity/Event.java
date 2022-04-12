@@ -33,6 +33,7 @@ public class Event {
         this.dateadded = dateadded;
     }
 
+    //TODO: Add braces to if statement
     public void setDateadded(String dateAdded) {
         if (dateAdded == null || "".equals(dateAdded))
             return;
