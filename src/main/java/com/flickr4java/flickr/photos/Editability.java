@@ -43,11 +43,10 @@ public class Editability {
     }
 
     @Override
-    // TODO: Replace instantiation of Boolean objects with calling Boolean.valueOf method
     public int hashCode() {
         int hash = 1;
-        hash += new Boolean(comment).hashCode();
-        hash += new Boolean(addmeta).hashCode();
+        hash += Boolean.valueOf(comment).hashCode();
+        hash += Boolean.valueOf(addmeta).hashCode();
         return hash;
     }
 
