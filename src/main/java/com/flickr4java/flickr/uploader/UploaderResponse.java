@@ -9,6 +9,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 
 import java.util.Collection;
+import java.util.Collections;
 
 /**
  * Parsing the response after an upload.
@@ -96,9 +97,8 @@ public class UploaderResponse implements Response {
     /**
      * @see com.flickr4java.flickr.Response#getPayloadCollection()
      */
-    // TODO: Return empty collection rather than null
     public Collection<Element> getPayloadCollection() {
-        return null;
+        return Collections.emptyList();
     }
 
 }
