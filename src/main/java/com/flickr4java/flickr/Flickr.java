@@ -278,6 +278,7 @@ public class Flickr implements IFlickr {
      * @param sharedSecret
      * @param transport
      */
+    // TODO: Replace call of setters with assignment of instance variables
     public Flickr(String apiKey, String sharedSecret, Transport transport) {
         setApiKey(apiKey);
         setSharedSecret(sharedSecret);
